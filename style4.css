@@ -1,0 +1,350 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+
+:root {
+  --Marineblue: hsl(213, 96%, 18%);
+  --Purplishblue: hsl(243, 100%, 62%);
+  --Pastelblue: hsl(228, 100%, 84%);
+  --Lightblue: hsl(206, 94%, 87%);
+  --Strawberryred: hsl(354, 84%, 57%);
+  --Coolgray: hsl(231, 11%, 63%);
+  --Lightgray: hsl(229, 24%, 87%);
+  --Magnolia: hsl(217, 100%, 97%);
+  --Alabaster: hsl(231, 100%, 99%);
+  --White: hsl(0, 0%, 100%);
+  --para: 1rem;
+  --family: "Ubuntu", "Sans-Serif";
+  --fw-semi: 400;
+  --fw-bold: 500;
+  --fw-xbold: 700;
+}
+
+*,h3,p,a{
+margin: 0;
+padding: 0;
+list-style: none;
+text-decoration: none;
+}
+body{
+    background-color: var(--White);
+}
+body,ul{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+font-family: var(--family);
+}
+main{
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+background-color: var(--Pastelblue);
+}
+.container{
+border: 1px solid var(--Coolgray);
+background-color: var(--White);
+width: 750px;
+height: 450px;
+padding: 10px;
+justify-content: center;
+align-items: center;
+display: flex;
+gap: 10%;
+border-radius: 10px;
+box-shadow: 1px 1px 5px var(--Coolgray);
+}
+/* Sidebar start */
+.sidebar{
+width: 28%;
+height: 100%;
+display: flex;
+justify-content: center;
+background-image: url(../assets/images/bg-sidebar-desktop.svg);
+background-position: center;
+border-radius: 8px;
+}
+.header{
+    line-height: 100px;
+}
+ul{
+    max-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    width: 80%;
+    text-align: left;
+}
+li{
+    height: 40px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    width: 90%;
+    font-size: 13px;
+    font-weight: var(--bold);
+    color: var(--Coolgray);
+}
+li > span{
+    border: 1px solid var(--White);
+    padding: 2px 8px;
+    border-radius: 15px;   
+    font-weight: 700;
+}
+li span{
+    color: var(--White);
+    font-size: 18px;
+}
+li p{
+    font-weight: 500;
+}
+
+.active{
+    background-color: var(--Lightblue);
+    color: var(--Marineblue);
+}
+
+/* Sidebar End */
+
+/* Side content start */
+aside{
+    width: 60%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+section{
+    height: 80%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: var(--White);
+    
+}
+.top-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 20%;
+    
+}
+   .top-section h3{
+        font-size: 27px;
+        color: var(--Marineblue);
+    }
+    .top-section p{
+        color: var(--Coolgray);
+    }
+.last-section{
+    height: 75%;
+    
+}
+
+.btn{
+    height: 20%;
+}
+a{
+    color: white;
+}
+.prev-stp a{
+    color: var(--Coolgray);
+}
+
+/* Step 4 Start  */
+.last-section{
+    width: 80%;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    gap: 10px;
+}
+.checkout-info{
+    background-color: var(--Pastelblue);
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    border-radius: 8px;
+}
+.top{
+    
+    display: flex;
+    align-items: center;
+    line-height: 20px;
+    width: 100%;
+    
+}
+
+.left,.m-left{
+   
+    width: 80%;
+    padding-left: 20px;
+}
+.left p{
+    color: var(--Marineblue);
+    font-weight: 500;
+}
+.left span, .price p{
+    color: var(--Marineblue);
+}
+.left span{
+    text-decoration: underline;
+}
+.right,.price{
+    width: 20%; 
+}
+.right p{
+    font-size: 18px;
+    color: var(--Marineblue);
+}
+
+.middle{
+    border-top:1px solid var(--Coolgray);
+    display: flex;
+    align-items: center;
+    line-height: 30px;
+}
+    .m-left{
+        color: var(--Coolgray);
+    }
+.last{
+    display: flex;
+    align-self: center;
+}
+.last span{
+    color: var(--Marineblue);
+}
+/* Step 4 End */
+
+
+.btns{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+   
+}
+.btns .prev-stp{
+    color: var(--Coolgray);
+    background-color: transparent;
+    font-size: 18px;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.btns .next-stp{
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    color: var(--White);
+    background-color: var(--Purplishblue);
+    font-size: 18px;
+    cursor: pointer;
+}
+.next-stp{
+    
+    color: var();
+}
+
+ /* Media Query for Mobile Devices */
+@media (max-width: 767px) {
+body {
+    background-color: red;
+}
+main{
+    width: 100%;
+    height: 100vh;
+    align-items: normal;
+    background-color: var(--White);
+}
+.container{
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    justify-content: flex-start;
+    height: 700px;
+    background-color: var(--Pastelblue);
+}
+.sidebar{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: green;
+    height: 200px;
+    position: relative;
+    background-image: url(./assets/images/bg-sidebar-mobile.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+ul{
+    flex-direction: row;
+    width: 60%;
+    height: 60%;
+
+}
+li{
+    align-items: center;
+    justify-content: center;
+}
+li > span{
+    padding: 8px 14px;
+    border-radius: 50%;   
+}
+li p{
+    display: none;
+}
+
+aside{
+    position: absolute;
+    top: 120px;
+    width: 90%;
+    height: 70%;
+    background-color: white;
+    border-radius: 10px;
+}
+section{
+    padding:20px;
+    border-radius: 10px;
+}
+.last-section{
+    width: 100%;
+    
+}
+.container{
+    height: 90vh;
+}
+.btns{
+    width: 95%;
+    align-items: start;
+}
+}
+/* Media Query for low resolution  Tablets, Ipads */
+/* @media (min-width: 481px) and (max-width: 767px) {
+body {
+    background-color: yellow;
+} */
+
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px){
+body {
+    background-color: white;
+}
+}
+
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1280px){
+body {
+    background-color: green;
+}
+}
+
+/* Media Query for Large screens */
+@media (min-width: 1281px) {
+body {
+    background-color: white;
+}
+}

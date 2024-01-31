@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skeleton</title>
+</head>
+    <style>
+            :root {
+    --Marine-blue: hsl(213, 96%, 18%);
+    --Purplish-blue: hsl(243, 100%, 62%);
+    --Pastel-blue: hsl(228, 100%, 84%);
+    --Light-blue: hsl(206, 94%, 87%);
+    --Strawberry-red: hsl(354, 84%, 57%);
+
+    --Cool-gray: hsl(231, 11%, 63%);
+    --Light-gray: hsl(229, 24%, 87%);
+    --Magnolia: hsl(217, 100%, 97%);
+    --Alabaster: hsl(231, 100%, 99%);
+    --White: hsl(0, 0%, 100%);
+    }
+     @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+        *,h3,p{
+            margin: 0;
+            padding: 0;
+        }
+        body,ul{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Hanken Grotesk', sans-serif;
+        }
+        main{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 600px;
+        }
+        .container{
+            border: 1px solid green;
+            width: 690px;
+            height: 450px;
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            gap: 8%;
+        }
+        /* Sidebar start */
+        .sidebar{
+            border: 1px solid red;
+            width: 35%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            background-image: url(./assets/images/bg-sidebar-desktop.svg);
+            background-position: center;
+        }
+            ul{
+                border: 1px solid black;
+                max-height: 250px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                list-style: none;
+                width: 60%;
+                
+            }
+            li{
+                border: 1px solid yellow;
+                height: 40px;
+                display: flex;
+                gap: 5px;
+                align-items: center;
+                width: 80%;
+
+            }
+            li > span{
+                border: red 1px solid;
+                padding: 2px 8px;
+                border-radius: 15px;
+                
+            }
+        /* Sidebar End */
+
+        /* Side content start */
+        aside{
+            border: 1px solid red;
+            width: 57%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+            section{
+                border: 1px solid red;
+                height: 70%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                background-color: white;
+                
+            }
+            .top-section{
+                border: 1px solid blue;
+                height: 23%;
+                
+            }
+                h3{
+                    font-size: 27px;
+                }
+            .last-section{
+                border: 1px solid blue;
+                height: 72%;
+            }
+            .btn{
+                border: 1px solid blue;
+                height: 20%;
+            }
+            
+        /* Side content End */
+
+             /* Media Query for Mobile Devices */
+        @media (max-width: 480px) {
+            body {
+                background-color: red;
+            }
+            main{
+                width: 100%;
+                height: 100vh;
+                align-items: normal;
+            }
+            .container{
+                flex-direction: column;
+                width: 100%;
+                padding: 0;
+                justify-content: flex-start;
+                height: 700px;
+            }
+            .sidebar{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                background-color: green;
+                height: 200px;
+                position: relative;
+                background-image: url(./assets/images/bg-sidebar-mobile.svg);
+                background-size: cover;
+                background-repeat: no-repeat;
+            
+            }
+            ul{
+                flex-direction: row;
+                width: 60%;
+                height: 60%;
+
+            }
+            li{
+                align-items: center;
+                justify-content: center;
+            }
+           li p{
+                display: none;
+            }
+
+           aside{
+                position: absolute;
+                width: 90%;
+                height: auto;
+                top: 120px;
+                background-color: white;
+            }
+            section{
+                padding:20px;
+            }
+        }
+         
+        /* Media Query for low resolution  Tablets, Ipads */
+        @media (min-width: 481px) and (max-width: 767px) {
+            body {
+                background-color: yellow;
+            }
+        }
+         
+        /* Media Query for Tablets Ipads portrait mode */
+        @media (min-width: 768px) and (max-width: 1024px){
+            body {
+                background-color: white;
+            }
+        }
+         
+        /* Media Query for Laptops and Desktops */
+        @media (min-width: 1025px) and (max-width: 1280px){
+            body {
+                background-color: green;
+            }
+        }
+         
+        /* Media Query for Large screens */
+        @media (min-width: 1281px) {
+            body {
+                background-color: white;
+            }
+        }
+
+            
+    </style>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="sidebar">
+                <ul>
+                    <li>
+                        <span>1</span>
+                        <p>STEP 1<br><span>Your Info</span></p>
+                    </li>
+                    <li>
+                        <span>2</span>
+                        <p>STEP 2<br><span>Select plan</span></p>
+                    </li>
+                    <li>
+                        <span>3</span>
+                        <p>STEP 3<br><span>Add-ons</span></p>
+                    </li>
+                    <li>
+                        <span>4</span>
+                        <p>STEP 4<br><span>Summary</span></p>
+                    </li>
+                </ul>
+            </div>
+            <aside>
+                <section>
+                    <div class="top-section">
+                        <h3>Personal info</h3>
+                        <p>Please provide your name, email address, and phone number.</p>
+                    </div>
+                    <div class="last-section">
+                        
+                    </div>
+                </section>
+                <div class="btn">
+                </div>
+            </aside>    
+      </div>
+      
+      </main>
+</body>
+</html>
