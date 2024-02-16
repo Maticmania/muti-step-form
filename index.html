@@ -40,33 +40,34 @@
                       <div class="box">
                         <div class="label">
                             <label for="name">Name</label>
-                            <p class="error">This Field Is Required</p>
+                            <p class="error" id="nameError"></p>
                         </div>
                         <input type="text" id="name" placeholder="e.g. Stephen King" required>
                       </div>
                       <div class="box">
                         <div class="label">
                             <label for="email">Email Address</label>
-                            <p class="error">This Field Is Required</p>
+                            <p class="error" id="emailError"></p>
                           </div>
-                          <input type="email" id="Email" placeholder="e.g. stephenking@lorem.com" required>
+                          <input type="email" id="email" placeholder="e.g. stephenking@lorem.com" required>
                         </div>
                         <div class="box">
                           <div class="label">
                             <label for="phone">Phone Number</label>
-                            <p class="error">This Field Is Required</p>
+                            <p class="error" id="phoneError"></p>
                           </div>
-                          <input type="tel" id="Number" placeholder="e.g. +1 234 567 890">
+                          <input type="tel" id="number" placeholder="e.g. +1 234 567 890">
                         </div>
                     </form>
                   </section>
                     <div class="btns btn">
                       <button class="prev-stp d-none" type="submit"></button>
-                      <a href="./step2.html"><button class="next-stp" type="submit">Next Step</button>
+                      <a href="./step2.html" id="link"><button class="next-stp" id="next" type="submit">Next Step</button>
                       </div></a>
                     </div>
             </aside>    
       </div>
       </main>
+<script src="./JavaScript/index.js"></script>
 </body>
 </html>

@@ -206,7 +206,7 @@ input{
     font-size: 16px;
     color: var(--Coolgray);
 }
-.price{
+.price,.price2,.price3{
     color: var(--Purplishblue);
 }
 .btns{

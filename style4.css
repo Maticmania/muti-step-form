@@ -187,7 +187,8 @@ a{
     color: var(--Marineblue);
     font-weight: 500;
 }
-.left span, .price p{
+
+.left span, .price p,.left a{
     color: var(--Marineblue);
 }
 .left span{

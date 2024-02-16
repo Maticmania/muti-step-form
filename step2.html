@@ -41,44 +41,51 @@
             <img src="../assets/images/icon-arcade.svg" alt="arcade" />
             <div class="plan-info chosen">
               <b>Arcade</b>
-              <span class="plan-priced">$9/mo</span>
+              <div class="plan-text">
+                <span class="plan-priced" id="arcPrice">$9/mo</span>
+                <span class="plan-priced-free" id="arcade"></span>
+              </div>
             </div>
           </div>
           <div class="plan-card">
             <img src="../assets/images/icon-advanced.svg" alt="arcade" />
             <div class="plan-info">
               <b>Advanced</b>
-              <span class="plan-priced">$12/mo</span>
+              <div class="plan-text">
+                <span class="plan-priced" id="advPrice">$9/mo</span>
+                <span class="plan-priced-free" id="advanced"></span>
+              </div>
             </div>
           </div>
           <div class="plan-card">
             <img src="../assets/images/icon-pro.svg" alt="arcade" />
             <div class="plan-info">
               <b>Pro</b>
-              <span class="plan-priced">$15/mo</span>
+              <div class="plan-text">
+                <span class="plan-priced" id="proPrice">$15/mo</span>
+                <span class="plan-priced-free" id="pro"></span>
+              </div>
             </div>
           </div>
           </div>
 
         <div class="switcher">
           <p class="monthly sw-active">Monthly</p>
-          <label class="switch">
-            <div class="form-check form-switch">
-              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-              <label class="form-check-label" for="flexSwitchCheckDefault"></label>
-            </div>
-            <span class="slider round"></span>
-          </label>
+          <div class="toggle-switch">
+            <input type="checkbox" id="toggle" class="toggle-checkbox" checked>
+            <label for="toggle" class="toggle-label"></label>
+          </div>
           <p class="yearly">Yearly</p>
         </div>
         
       </div>
-      
         <div class="btns btn">
-            <a href="./index.html"><button class="prev-stp" type="button">Go Back</button></a>
+            <a href="./index.html"><button class="prev-stp" type="button" id="go-back">Go Back</button></a>
           <a href="./step3.html"><button class="next-stp" type="submit">Next Step</button></a>
         </div>
       </div>
     </aside>
     </main>
+    <script src="./JavaScript/index2.js"></script>
+</body>
 </html>
