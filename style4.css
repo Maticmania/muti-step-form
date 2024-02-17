@@ -208,7 +208,7 @@ a{
     align-items: center;
     line-height: 30px;
 }
-    .m-left{
+    .m-left, .last #m-y-txt {
         color: var(--Coolgray);
     }
 .last{

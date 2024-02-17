@@ -261,6 +261,15 @@ height: auto;
         border: 1px solid var(--Coolgray);
         border-radius: 10px;
         cursor: pointer;
+        position: relative;
+    }
+    .plan-card #check {
+        position: absolute;
+        top: 0%;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        cursor: pointer;
     }
     .plan-card:hover{
         border: 2px solid var(--Marineblue);

@@ -57,4 +57,26 @@ profileCheck.addEventListener('change', () =>{
     localStorage.setItem('profile', JSON.stringify(profileSelect))
 })
 
+const data1 = localStorage.getItem('online');
+const onlineData = JSON.parse(data1)
+
+const data2 = localStorage.getItem('storage');
+const storageData = JSON.parse(data2)
+
+const data3 = localStorage.getItem('profile');
+const profileData = JSON.parse(data3)
+
+if (onlineData === true) {
+    online.checked
+    
+}else{
+    online
+}
+
+// if(parsedData){
+//     inputName.value = parsedData.name || ""
+//     inputEmail.value = parsedData.email || ""
+//     inputNo.value = parsedData.phone || ""
+//   }
+
 

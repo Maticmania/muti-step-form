@@ -48,16 +48,35 @@
   transform: translateX(26px);
 }
 
+.omo{
+  border: 1px solid red;
+  position: relative;
+}
+.radio{
+  position: absolute; 
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
     </style>
 </head>
 <body>
     
-    <div class="toggle-switch">
+    <!-- <div class="toggle-switch">
         <input type="checkbox" id="toggle" class="toggle-checkbox">
         <label for="toggle" class="toggle-label"></label>
-      </div>
+      </div> -->
 
-
+<!-- <div class="omo">
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim voluptatibus possimus repellat cumque blanditiis praesentium hic similique veniam at quia excepturi ullam maiores soluta, nesciunt sequi, est vel cum! Quia!</p>
+  <input type="radio" name="ok" class="radio">
+</div>
+<div class="omo">
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim voluptatibus possimus repellat cumque blanditiis praesentium hic similique veniam at quia excepturi ullam maiores soluta, nesciunt sequi, est vel cum! Quia!</p>
+  <input type="radio" name="ok" class="radio">
+</div> -->
 <!-- <script>
         const toggle = document.getElementById("toggle");
         
@@ -72,6 +91,58 @@
           }
         });
 </script> -->
+
+<br />
+<br />
+
+<br />
+<br />
+
+<div class="container">
+  <div class="field">
+    <p class="control">
+  <label class="checkbox">
+    <input type="checkbox" id="Check1" value="Value1" onclick="selectOnlyThis(this.id)" /> Option 1
+  </label>
+</p>
+    <p class="control">
+  <label class="checkbox">
+    <input type="checkbox" id="Check2" value="Value1" onclick="selectOnlyThis(this.id)" /> Option 2
+  </label>
+</p>
+<p class="control">
+  <label class="checkbox">
+  <input type="checkbox" id="Check3" value="Value1" onclick="selectOnlyThis(this.id)" /> Option 3
+  </label>
+</p>
+<!-- <p class="control">
+  <label class="checkbox">
+  <input type="checkbox" id="Check4" value="Value1" onclick="selectOnlyThis(this.id)" /> Option 4
+  </label>
+</p> -->
+<script>
+  
+function selectOnlyThis(id) {
+for (let i = 1;i <= 3; i++){
+    if ("Check" + i === id && document.getElementById("Check" + i).checked === true){
+            document.getElementById("Check" + i).checked = true;
+            } else {
+              document.getElementById("Check" + i).checked = false;
+            }
+    }   
+}
+
+    const check1 = document.querySelector('#Check1')
+    const check2 = document.querySelector('#Check2')
+    const check3 = document.querySelector('#Check3')
+    const check4 = document.querySelector('#Check4')
+
+    console.log(check1.checked);
+    check1.addEventListener('change', ()=>{
+      const check1Select = check1.checked
+      console.log(check1Select);
+    })
+</script>
 </body>
 </html>
 
