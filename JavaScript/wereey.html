@@ -64,10 +64,10 @@
 </head>
 <body>
     
-    <!-- <div class="toggle-switch">
+    <div class="toggle-switch">
         <input type="checkbox" id="toggle" class="toggle-checkbox">
         <label for="toggle" class="toggle-label"></label>
-      </div> -->
+      </div>
 
 <!-- <div class="omo">
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim voluptatibus possimus repellat cumque blanditiis praesentium hic similique veniam at quia excepturi ullam maiores soluta, nesciunt sequi, est vel cum! Quia!</p>
@@ -120,6 +120,19 @@
   <input type="checkbox" id="Check4" value="Value1" onclick="selectOnlyThis(this.id)" /> Option 4
   </label>
 </p> -->
+
+  <button id="deleteButton">Delete Local Storage</button>
+
+  <script>
+    const jhhj = document.getElementById("deleteButton");
+      jhhj = {
+        name : 'hghhhg'
+      }
+    document.getElementById("deleteButton").addEventListener("click", function() {
+      localStorage.removeItem("yourLocalStorageKey");
+      alert("Local storage item removed!");
+    });
+  </script>
 <script>
   
 function selectOnlyThis(id) {

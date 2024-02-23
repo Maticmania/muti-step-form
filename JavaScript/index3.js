@@ -80,3 +80,10 @@ if (onlineData === true) {
 //   }
 
 
+const goBack2Plan = document.querySelector('#back2plan')
+
+goBack2Plan.addEventListener('click', () =>{
+    localStorage.removeItem('arcadePlan');
+    localStorage.removeItem('advancePlan');
+    localStorage.removeItem('proPlan');
+})

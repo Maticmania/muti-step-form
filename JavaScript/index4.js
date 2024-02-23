@@ -192,7 +192,7 @@ if (storage === true && isYearly === true) {
 }
 
 //calculate monthly price and Yearly price for profile
-if (profile === true) {
+if (profile === true && isYearly === true) {
     currentPrice += profilePriceYearly;
 }else if (profile === true) {
     currentPrice += profilePriceMonthly;
@@ -204,6 +204,8 @@ console.log(currentPrice)
 
 // Add the total Price to the webPage
 const totalPrice = document.querySelector('#last-js')
+const yearly = 'yr'
+const month = 'mo'
 
 totalPrice.innerHTML += `<span id="total-js">+$${currentPrice}/mo</span>`
 
@@ -215,16 +217,25 @@ if (isYearly === true) {
     totalMonthlyOrYearlyTxt.innerHTML += '(per month)';
 }
 
-//reset all Plan when the click is press
+//reset all Plan when the link is press
 const changeBtn = document.querySelector('#change-btn');
 
 console.log(changeBtn)
 changeBtn.addEventListener('click', () =>{
-    
+    localStorage.removeItem('arcadePlan');
+    localStorage.removeItem('advancePlan');
+    localStorage.removeItem('proPlan');
+    localStorage.removeItem('online');
+    localStorage.removeItem('storage');
+    localStorage.removeItem('profile');
+
 })
 
-function change() {
-    setTimeout(() => {
-        localStorage.clear('arcadePlan')
-     }, 1000);
-}
+// reset price when the Go back button is pressed
+const prevStep = document.querySelector('.prev-stp')
+
+prevStep.addEventListener('click', () =>{
+    localStorage.removeItem('online');
+    localStorage.removeItem('storage');
+    localStorage.removeItem('profile');
+})

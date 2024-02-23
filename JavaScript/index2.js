@@ -168,5 +168,9 @@ return
 //     console.log(data);
     
 
-
-
+const goBack2info = document.querySelector('#go-back');
+goBack2info.addEventListener('click', () =>{
+    localStorage.removeItem('arcadePlan');
+    localStorage.removeItem('advancePlan');
+    localStorage.removeItem('proPlan');
+})
